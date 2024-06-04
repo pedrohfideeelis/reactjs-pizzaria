@@ -1,0 +1,11 @@
+#promo-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#promo-banner img {
+  width: 1100px; 
+  height: 500px;
+}
