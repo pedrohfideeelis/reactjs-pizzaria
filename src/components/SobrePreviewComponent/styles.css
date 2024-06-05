@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    border-radius: 10px;
     font-family: 'Inter', sans-serif;
     margin-top: 70px;
   }
@@ -39,7 +38,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 1em;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   
   #sobre-preview button:hover {
