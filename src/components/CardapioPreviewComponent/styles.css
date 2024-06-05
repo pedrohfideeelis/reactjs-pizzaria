@@ -1,60 +1,60 @@
 #cardapio-preview {
-    text-align: center;
-  }
-  
-  #cardapio-preview h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    margin-right: 25px;
-  }
-  
-  #pizza-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    width: 930px;
-    height: 930px;
-    align-content: center;
-    justify-content: center;
-    margin-left: 200px;
-  }
-  
-  .pizza-card {
-    position: relative;
-    border-radius: 35px;
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  
-  .pizza-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .pizza-card img {
-    width: 299px;
-  }
-  
-  .pizza-card button {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #e63946;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1em;
-    width: 180px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-  }
-  
-  .pizza-card button:hover {
-    background-color: #d62828;
-  }
-  
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+#cardapio-preview h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+}
+
+#pizza-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 932px; /* Defina a largura fixa */
+  margin: 0 auto; /* Centralize o grid na página */
+}
+
+.pizza-card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  height: 293px;
+}
+
+.pizza-card:hover {
+  transform: scale(1.05);
+}
+
+.pizza-card img {
+  width: 100%;
+  height: auto;
+}
+
+.pizza-card button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 180px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.pizza-card button:hover {
+  background-color: #d62828;
+}
