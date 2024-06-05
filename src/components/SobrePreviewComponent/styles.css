@@ -1,0 +1,47 @@
+#sobre-preview {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 70px;
+  }
+  
+  #sobre-preview img {
+    width: 250px;
+    height: 250px;
+    border-radius: 35px;
+    margin-right: 50px;
+    margin-left: 180px;
+  }
+  
+  #info {
+    flex: 1;
+  }
+  
+  #info h3 {
+    font-size: 1.5em;
+    color: #C2272D;
+    margin-bottom: 10px;
+  }
+  
+  #info p {
+    font-size: 1em;
+    color: #C2272D;
+  }
+  
+  #sobre-preview button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    margin-top: 50px;
+  }
+  
+  #sobre-preview button:hover {
+    background-color: #d62828;
+  }
