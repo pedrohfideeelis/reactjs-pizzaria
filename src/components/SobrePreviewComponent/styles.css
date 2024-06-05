@@ -1,10 +1,12 @@
 #sobre-preview {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
     padding: 20px;
     border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    margin-top: 70px;
+    margin: 50px auto;
+    max-width: 960px;
   }
   
   #sobre-preview img {
@@ -12,11 +14,12 @@
     height: 250px;
     border-radius: 35px;
     margin-right: 50px;
-    margin-left: 180px;
+    margin-bottom: 35px;
   }
   
   #info {
     flex: 1;
+    margin-bottom: 50px;
   }
   
   #info h3 {
@@ -26,7 +29,8 @@
   }
   
   #info p {
-    font-size: 1em;
+    font-size: 19px;
+    font-weight: 500;
     color: #C2272D;
   }
   
@@ -39,7 +43,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 1em;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   
   #sobre-preview button:hover {
