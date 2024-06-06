@@ -11,7 +11,7 @@ import VegImg from "../../assets/images/pizzas/vegetariana.jpeg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-class CardapioPreview extends React.Component {
+export class CardapioPreview extends React.Component {
   render() {
     return (
       <section id="cardapio-preview">
@@ -76,5 +76,3 @@ class CardapioPreview extends React.Component {
     );
   }
 }
-
-export default CardapioPreview;
