@@ -9,7 +9,7 @@ class Navbar extends React.Component {
       <header>
         <nav id="navbar">
           <div className="nav-brand">
-            <Link to='/'>
+            <Link to="/">
               <img src={logoImg} alt="Logo Pizzaria Vovó Beth" />
             </Link>
           </div>
@@ -19,15 +19,10 @@ class Navbar extends React.Component {
               <Link to="/">Menu</Link>
             </li>
             <li>
-            <Link to="/cardapio">Cardápio</Link>
+              <Link to="/cardapio">Cardápio</Link>
             </li>
             <li>
-            <Link to="/sobre-nos">Sobre Nós</Link>
-            </li>
-            <li>
-              <a href="/">
-                <button>Entrar</button>
-              </a>
+              <Link to="/sobre-nos">Sobre Nós</Link>
             </li>
           </ul>
         </nav>
