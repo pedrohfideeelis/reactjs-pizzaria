@@ -5,6 +5,7 @@ import Footer from "./components/FooterComponent/Footer";
 import Home from "./components/HomeComponent/Home";
 
 import "./App.css";
+import { Cardapio } from "./components/CardapioComponent/Cardapio";
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cardapio" element={<Cardapio/>}/>
           </Routes>
         <Footer />
       </>
