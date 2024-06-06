@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 import VovoImg from "../../assets/images/vovo-beth.jpeg";
 
@@ -17,7 +18,9 @@ class SobrePreview extends React.Component {
             técnicas italianas com ingredientes e sabores tradicionais
             japoneses.
           </p>
-          <button>Ler Mais</button>
+          <Link to="/sobre-nos">
+            <button>Ler Mais</button>
+          </Link>
         </div>
       </section>
     );
