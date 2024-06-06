@@ -1,6 +1,7 @@
 import React from "react";
 import logoImg from "../../assets/images/PIZZA_LOGO_HORIZONTAL.png";
-import "./styles.css"
+import "./styles.css";
+import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
   render() {
@@ -8,20 +9,20 @@ class Navbar extends React.Component {
       <header>
         <nav id="navbar">
           <div className="nav-brand">
-            <a href="/">
+            <Link to='/'>
               <img src={logoImg} alt="Logo Pizzaria Vovó Beth" />
-            </a>
+            </Link>
           </div>
 
           <ul className="nav-list">
             <li>
-              <a href="/">Menu</a>
+              <Link to="/">Menu</Link>
             </li>
             <li>
-              <a href="/">Cardápio</a>
+            <Link to="/cardapio">Cardápio</Link>
             </li>
             <li>
-              <a href="/">Sobre Nós</a>
+            <Link to="/sobre-nos">Sobre Nós</Link>
             </li>
             <li>
               <a href="/">
