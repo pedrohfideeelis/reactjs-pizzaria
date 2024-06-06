@@ -9,13 +9,13 @@ import "./App.css";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
         <Footer />
-      </div>
+      </>
     );
   }
 }
