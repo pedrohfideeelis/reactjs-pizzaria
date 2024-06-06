@@ -1,0 +1,22 @@
+.cardapio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 932px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+#cardapio-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 100px;
+}
