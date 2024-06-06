@@ -50,6 +50,7 @@
   cursor: pointer;
   font-size: 1em;
   width: 180px;
+  height: 40px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
