@@ -1,9 +1,12 @@
 #sobre-preview {
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
     font-family: 'Inter', sans-serif;
-    margin-top: 70px;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 960px;
+    margin-bottom: 20px;
   }
   
   #sobre-preview img {
@@ -11,11 +14,12 @@
     height: 250px;
     border-radius: 35px;
     margin-right: 50px;
-    margin-left: 180px;
+    margin-bottom: 35px;
   }
   
   #info {
     flex: 1;
+    margin-bottom: 50px;
   }
   
   #info h3 {
@@ -25,7 +29,8 @@
   }
   
   #info p {
-    font-size: 1em;
+    font-size: 19px;
+    font-weight: 500;
     color: #C2272D;
   }
   

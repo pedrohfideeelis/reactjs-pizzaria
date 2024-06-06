@@ -17,8 +17,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  width: 932px; /* Defina a largura fixa */
-  margin: 0 auto; /* Centralize o grid na página */
+  width: 932px;
+  margin: 0 auto;
 }
 
 .pizza-card {
@@ -46,11 +46,11 @@
   background-color: #e63946;
   color: white;
   border: none;
-  padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
   font-size: 1em;
   width: 180px;
+  height: 40px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
