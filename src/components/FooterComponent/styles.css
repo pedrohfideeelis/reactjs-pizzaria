@@ -13,17 +13,20 @@ footer {
   justify-content: space-between;
   width: 80%;
   max-width: 1200px;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 15px;
 }
 
 #site-map {
   display: flex;
-  margin-left: 55px;
+  flex-wrap: wrap;
+  margin-right: auto;
 }
 
 .footer-section {
   min-width: 150px;
+  margin-right: 0px; 
 }
 
 .footer-section h4 {
@@ -47,18 +50,18 @@ footer {
 .footer-brand {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .footer-brand img {
-  width: 70px;
+  width: 180px;
   height: auto;
-  margin-left: 65px;
 }
 
 #contact {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-left: 0; 
 }
 
 #contact a {
@@ -70,22 +73,31 @@ footer {
   height: 30px;
 }
 
-#copy {
-  margin-top: 30px;
-  text-align: left;
-  margin-left: 360px;
-  width: 100%;
+#contact-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-left: auto; 
 }
 
-.footer-section ul li a:hover{
+#copy {
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  margin-right: auto;
+  width: calc(100% - 40px);
+  margin-left: 350px;
+}
+
+.footer-section ul li a:hover {
   color: white;
   transition: color 0.3s;
-} 
+}
 
 #contact img:hover {
   transform: scale(1.05);
 }
 
-.footer-brand img:hover{
+.footer-brand img:hover {
   transform: scale(1.05);
 }
