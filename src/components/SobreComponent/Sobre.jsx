@@ -63,15 +63,15 @@ export class Sobre extends React.Component {
           </div>
         </section>
         <section className="a-pizzaria">
-          <h2>A Pizzaria</h2>
+          <img src={PizzariaImg} alt="Pizzaria" />
           <div className="content">
+            <h2>A Pizzaria</h2>
             <p>
               Criada em 1824, a Vovó Beth Pizzaria conta com um ambiente
               aconchegante e familiar, combinando aspectos japoneses e italianos
               nas deliciosas pizzas artesanais e feitas com muito amor pela Vovó
               Beth e sua equipe.
             </p>
-            <img src={PizzariaImg} alt="Pizzaria" />
           </div>
         </section>
       </section>
