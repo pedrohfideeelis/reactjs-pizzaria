@@ -6,6 +6,7 @@ import Home from "./components/HomeComponent/Home";
 
 import "./App.css";
 import { Cardapio } from "./components/CardapioComponent/Cardapio";
+import { Sobre } from "./components/SobreComponent/Sobre";
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cardapio" element={<Cardapio/>}/>
+            <Route path="/sobre-nos" element={<Sobre/>}/>
           </Routes>
         <Footer />
       </>

@@ -14,9 +14,9 @@ export class Sobre extends React.Component {
     return (
       <section className="sobre-nos">
         <section className="nossa-historia">
-          <h1>Nossa História</h1>
+          <img src={VovoImg} alt="Foto Vovó Beth" />
           <div className="content">
-            <img src={VovoImg} alt="Foto Vovó Beth" />
+            <h1>Nossa História</h1>
             <p>
               Um pedacinho da Itália com um toque especial japonês! Tudo começou
               há décadas, quando a jovem Beth viajou para a Itália e se encantou
@@ -53,7 +53,7 @@ export class Sobre extends React.Component {
             <div className="membro">
               <img src={GiuzzepeJrImg} alt="Giuzzepe Jr." />
               <h3>Giuzzepe Jr.</h3>
-              <p>Enregador</p>
+              <p>Entregador</p>
             </div>
             <div className="membro">
               <img src={MarceloImg} alt="Marcelo" />
@@ -61,8 +61,10 @@ export class Sobre extends React.Component {
               <p>Garçom</p>
             </div>
           </div>
-          <section className="pizzaria">
-            <h2>A Pizzaria</h2>
+        </section>
+        <section className="a-pizzaria">
+          <h2>A Pizzaria</h2>
+          <div className="content">
             <p>
               Criada em 1824, a Vovó Beth Pizzaria conta com um ambiente
               aconchegante e familiar, combinando aspectos japoneses e italianos
@@ -70,7 +72,7 @@ export class Sobre extends React.Component {
               Beth e sua equipe.
             </p>
             <img src={PizzariaImg} alt="Pizzaria" />
-          </section>
+          </div>
         </section>
       </section>
     );
