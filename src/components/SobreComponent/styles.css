@@ -83,6 +83,10 @@ h2 {
   object-fit: cover;
 }
 
+.nossa-equipe .membro img:hover {
+  transform: scale(1.05);
+}
+
 .nossa-equipe .membro h3 {
   margin: 10px 0 5px;
   color: #f4f4f4;
