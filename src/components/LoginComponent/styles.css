@@ -1,0 +1,111 @@
+form button {
+    background-color: #f8931f;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: #f0f0f0;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+  }
+  
+  .login-box label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .login-box input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%; /* Garante que o input ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+  
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-container input {
+    display: inline-block;
+  }
+  
+  .password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .login-box button {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+  }
+  
+  .login-box button:hover {
+    background-color: #e68a00;
+  }
+  
+  .login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .login-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .login-links a:hover {
+    text-decoration: underline;
+  }
+  

@@ -40,7 +40,7 @@ header nav#navbar ul.nav-list li a:hover{
     transition: color 0.3s;
 }
 
-header ul.nav-list li button {
+header ul.nav-list li#login-button {
     background-color: #F8931F;
     border: none;
     padding: 10px 20px;
