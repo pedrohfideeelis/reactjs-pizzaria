@@ -3,7 +3,7 @@ import logoImg from "../../assets/images/PIZZA_LOGO_HORIZONTAL.png";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-class Navbar extends React.Component {
+export class Navbar extends React.Component {
   render() {
     return (
       <header>
@@ -30,5 +30,3 @@ class Navbar extends React.Component {
     );
   }
 }
-
-export default Navbar;

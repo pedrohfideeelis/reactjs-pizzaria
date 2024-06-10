@@ -7,7 +7,7 @@ import Telefone from "../../assets/images/icons/telefone.png";
 import Email from "../../assets/images/icons/e-mail.png";
 import Local from "../../assets/images/icons/local.png";
 
-class Footer extends React.Component {
+export class Footer extends React.Component {
   render() {
     return (
       <footer>
@@ -65,5 +65,3 @@ class Footer extends React.Component {
     );
   }
 }
-
-export default Footer;
