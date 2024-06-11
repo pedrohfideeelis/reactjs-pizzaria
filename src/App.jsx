@@ -8,6 +8,7 @@ import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";
 import "./App.css";
 import { Login } from "./components/LoginComponent/Login";
+import TestAPIConnection from "./TestAPIConnection";
 
 class App extends React.Component {
   render() {
