@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cardapio" element={<Cardapio />} />
