@@ -11,10 +11,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.delivery-form h2 {
+  color: black;
   text-align: left;
   margin-bottom: 20px;
-  color: black;
 }
 
 .form-group {
