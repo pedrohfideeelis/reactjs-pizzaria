@@ -17,7 +17,7 @@ export class SelectPizza extends React.Component {
               src={this.props.pizzaImg}
               alt={this.props.pizzaName}
               className="pizza-img"
-              style={{ width: "200px", height: "150px" }}
+              style={{ width: "200px", height: "200px" }}
             />
             <div className="price">Valor R${this.props.pizzaPrice}</div>
           </div>
