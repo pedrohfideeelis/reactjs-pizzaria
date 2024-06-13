@@ -1,22 +1,74 @@
+/* Estilos para o modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos adicionais para garantir que o conteúdo não transborde */
+.modal-content .pizza-info {
+  text-align: center;
+}
+
+.modal-content img.pizza-img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 150px;
+}
+
+.modal-content .obs textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal-content .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-content .buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
 .cardapio-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 932px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 932px;
+  margin: 0 auto;
 }
 
 h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin-top: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 50px;
 }
 
 #cardapio-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 100%;
-    margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 100px;
 }

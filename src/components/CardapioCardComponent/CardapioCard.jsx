@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css"
+import "./styles.css";
 
 export class CardapioCard extends React.Component {
   render() {
@@ -9,7 +9,9 @@ export class CardapioCard extends React.Component {
         <div className="card-infos">
           <h3>{this.props.title}</h3>
           <p>{this.props.ingredientes}</p>
-          <button>Selecionar</button>
+          <button className="select" onClick={this.props.onSelect}>
+            Selecionar
+          </button>
         </div>
       </article>
     );

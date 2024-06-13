@@ -7,7 +7,6 @@ import { Cardapio } from "./components/CardapioComponent/Cardapio";
 import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";
 import { Login } from "./components/LoginComponent/Login";
-import { Entrega } from "./components/FormEntregaComponent/Entrega";
 import "./App.css";
 
 class App extends React.Component {
@@ -21,7 +20,6 @@ class App extends React.Component {
           <Route path="/sobre-nos" element={<Sobre />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<Login />} />
-          <Route path="/dados-pedido" element={<Entrega />} />
         </Routes>
         <Footer />
       </>
