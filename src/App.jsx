@@ -7,8 +7,6 @@ import { Cardapio } from "./components/CardapioComponent/Cardapio";
 import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";
 import { Login } from "./components/LoginComponent/Login";
-import { Historico } from "./components/HistoricoComponent/Historico";
-import { Fila } from "./components/FilaComponent/Fila";
 import { CartProvider } from "./components/CartComponent/CartContext";
 import "./App.css";
 
