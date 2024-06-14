@@ -1,12 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
+import ConfirmModal from "../ConfirmComponent/ConfirmModal";
 import "./styles.css";
 
-export class Entrega extends React.Component {
-  render() {
+export const Entrega = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
     return (
       <div className="delivery-form">
         <h2>Dados para Entrega</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Nome Completo:</label>
             <input type="text" id="name" />
@@ -45,7 +56,7 @@ export class Entrega extends React.Component {
             </button>
           </div>
         </form>
+        {isModalOpen && <ConfirmModal onClose={handleCloseModal} />}
       </div>
     );
   }
-}
