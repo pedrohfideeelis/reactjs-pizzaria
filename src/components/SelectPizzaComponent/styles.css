@@ -13,7 +13,6 @@
 
 .pizza-info h1 {
   font-size: 30px;
-  margin-bottom: 10px;
 }
 
 .size-options {
@@ -21,10 +20,10 @@
 }
 
 .size {
-  font-size: 1.5em;
+  font-size: 20px;
   padding: 10px 20px;
   margin: 0 5px;
-  background-color: #e74c3c;
+  background-color: #C2272D;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -32,7 +31,7 @@
 }
 
 .size:hover {
-  background-color: #c0392b;
+  background-color: #dd2027;
 }
 
 .pizza-img {
@@ -44,6 +43,7 @@
 
 .price {
   font-size: 25px;
+  font-weight: 700;
   margin: 20px 0;
 }
 
@@ -56,17 +56,20 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  margin-right: 20px;
+  font-weight: 600;
 }
 
 .voltar {
-  background-color: #929292;
-  color: black;
+  background-color: #C2272D;
+  color: white;
   border: none;
   padding: 15px 30px;
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  font-weight: 600;
 }
 
 .add-to-cart:hover {
@@ -79,6 +82,7 @@
 
 .obs h2 {
   font-size: 1.5em;
+  text-align: center;
   margin-bottom: 10px;
 }
 

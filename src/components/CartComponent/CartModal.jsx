@@ -4,7 +4,8 @@ import { CartContext } from "../../components/CartComponent/CartContext";
 import "../CartComponent/styles.css";
 
 const CartModal = ({ onClose }) => {
-  const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
+  const { cartItems, removeFromCart, clearCart, getTotalPrice } =
+    useContext(CartContext);
   const navigate = useNavigate();
 
   const handleCheckout = () => {
@@ -26,11 +27,16 @@ const CartModal = ({ onClose }) => {
             <ul>
               {cartItems.map((item, index) => (
                 <li key={index}>
-                  <img src={item.pizzaImg} alt={item.title} />
+                  <img src={item.pizzaImg} alt={item.pizzaName} />
                   <div>
-                    <p>{item.title}</p>
-                    <p>R${item.pizzaPrice}</p>
-                    <button onClick={() => removeFromCart(index)}>
+                    <p id="pizza-name">
+                      {item.pizzaName} ({item.pizzaSize})
+                    </p>
+                    <p id="pizza-price">R${item.pizzaPrice},00</p>
+                    {item.observations && (
+                      <p id="obs-text">Observações: {item.observations}</p>
+                    )}
+                    <button id="remove-btn" onClick={() => removeFromCart(index)}>
                       Remover
                     </button>
                   </div>
@@ -40,9 +46,14 @@ const CartModal = ({ onClose }) => {
             <div className="total-price">
               <h3>Total: R${getTotalPrice()}</h3>
             </div>
-            <button className="checkout-button" onClick={handleCheckout}>
-              CONCLUIR COMPRA
-            </button>
+            <div className="cart-buttons">
+              <button className="clear-cart-button" onClick={clearCart}>
+                LIMPAR CARRINHO
+              </button>
+              <button className="checkout-button" onClick={handleCheckout}>
+                CONCLUIR COMPRA
+              </button>
+            </div>
           </>
         )}
       </div>

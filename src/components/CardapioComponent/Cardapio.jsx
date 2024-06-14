@@ -47,7 +47,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Sushi",
                 pizzaImg: SushiImg,
-                pizzaPrice: 50,
+                pizzaPrices: { P: 50, M: 76, G: 88 },
               })
             }
           />
@@ -60,7 +60,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Pepperoni",
                 pizzaImg: PepperoniImg,
-                pizzaPrice: 40,
+                pizzaPrices: { P: 30, M: 45, G: 60 },
               })
             }
           />
@@ -72,7 +72,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Atum",
                 pizzaImg: AtumImg,
-                pizzaPrice: 45,
+                pizzaPrices: { P: 25, M: 37, G: 55 },
               })
             }
           />
@@ -84,7 +84,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Sashimi",
                 pizzaImg: SashimiImg,
-                pizzaPrice: 55,
+                pizzaPrices: { P: 57, M: 79, G: 88 },
               })
             }
           />
@@ -96,7 +96,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Carne Seca",
                 pizzaImg: CarneSecaImg,
-                pizzaPrice: 47,
+                pizzaPrices: { P: 35, M: 55, G: 60 },
               })
             }
           />
@@ -108,7 +108,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Guioza",
                 pizzaImg: GuiozaImg,
-                pizzaPrice: 48,
+                pizzaPrices: { P: 55, M: 77, G: 88 },
               })
             }
           />
@@ -120,7 +120,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Queijo",
                 pizzaImg: QueijoImg,
-                pizzaPrice: 35,
+                pizzaPrices: { P: 20, M: 37, G: 55 },
               })
             }
           />
@@ -132,7 +132,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza de Frango",
                 pizzaImg: FrangoImg,
-                pizzaPrice: 42,
+                pizzaPrices: { P: 33, M: 45, G: 60 },
               })
             }
           />
@@ -144,7 +144,7 @@ export class Cardapio extends React.Component {
               this.handleSelectPizza({
                 pizzaName: "Pizza Vegetariana",
                 pizzaImg: VegImg,
-                pizzaPrice: 38,
+                pizzaPrices: { P: 29, M: 42, G: 58 },
               })
             }
           />
@@ -153,7 +153,7 @@ export class Cardapio extends React.Component {
           <SelectPizza
             pizzaName={this.state.selectedPizza.pizzaName}
             pizzaImg={this.state.selectedPizza.pizzaImg}
-            pizzaPrice={this.state.selectedPizza.pizzaPrice}
+            pizzaPrices={this.state.selectedPizza.pizzaPrices}
             onAddToCart={this.handleAddToCart}
             onClose={this.handleCloseModal}
           />

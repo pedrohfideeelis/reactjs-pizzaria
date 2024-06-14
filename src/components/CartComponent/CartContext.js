@@ -14,12 +14,18 @@ export const CartProvider = ({ children }) => {
     setCartItems(newCartItems);
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + item.pizzaPrice, 0);
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getTotalPrice }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, clearCart, getTotalPrice }}
+    >
       {children}
     </CartContext.Provider>
   );

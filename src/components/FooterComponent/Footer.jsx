@@ -50,8 +50,8 @@ export class Footer extends React.Component {
               <a href="/"><img src={LogoImg} alt="Pizza Logo" /></a>
             </div>
             <div id="contact">
-              <a href="https://wa.me/5562994500960"><img src={WhatsApp} alt="WhatsApp" /></a>
-              <a href="/https://instagram.com/__uaifideeelis"><img src={Instagram} alt="Instagram" /></a>
+              <a href="https://wa.me/5562994500960" target="_blank" rel="noreferrer"><img src={WhatsApp} alt="WhatsApp" /></a>
+              <a href="https://instagram.com/_uaifideeelis" target="_blank" rel= "noreferrer"><img src={Instagram} alt="Instagram" /></a>
               <a href="/"><img src={Telefone} alt="Telefone" /></a>
               <a href="/"><img src={Email} alt="Email" /></a>
               <a href="/"><img src={Local} alt="Local" /></a>
