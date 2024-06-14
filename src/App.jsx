@@ -7,12 +7,16 @@ import { Cardapio } from "./components/CardapioComponent/Cardapio";
 import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";
 import { Login } from "./components/LoginComponent/Login";
+import { Historico } from "./components/HistoricoComponent/Historico";
+import { Fila } from "./components/FilaComponent/Fila";
+import { CartProvider } from "./components/CartComponent/CartContext";
 import "./App.css";
 
 class App extends React.Component {
   render() {
     return (
       <>
+      <CartProvider>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +26,7 @@ class App extends React.Component {
           <Route path="/admin/login" element={<Login />} />
         </Routes>
         <Footer />
+        </CartProvider>
       </>
     );
   }

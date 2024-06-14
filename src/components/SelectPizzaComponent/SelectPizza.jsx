@@ -17,7 +17,7 @@ export class SelectPizza extends React.Component {
               src={this.props.pizzaImg}
               alt={this.props.pizzaName}
               className="pizza-img"
-              style={{ width: "200px", height: "200px" }}
+              style={{ width: "200px", height: "150px" }}
             />
             <div className="price">Valor R${this.props.pizzaPrice}</div>
           </div>
@@ -32,7 +32,18 @@ export class SelectPizza extends React.Component {
             ></textarea>
           </div>
           <div className="buttons">
-            <button className="add-to-cart">ADICIONAR AO CARRINHO</button>
+            <button
+              className="add-to-cart"
+              onClick={() =>
+                this.props.onAddToCart({
+                  pizzaName: this.props.pizzaName,
+                  pizzaImg: this.props.pizzaImg,
+                  pizzaPrice: this.props.pizzaPrice,
+                })
+              }
+            >
+              ADICIONAR AO CARRINHO
+            </button>
             <button className="voltar" onClick={this.props.onClose}>
               VOLTAR
             </button>

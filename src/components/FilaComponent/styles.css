@@ -1,0 +1,78 @@
+.pedidos-container {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.fila {
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pedido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.pedido:last-child {
+  border-bottom: none;
+}
+
+.pedido-info {
+  flex: 1;
+}
+
+.pedido-info p {
+  margin: 0;
+}
+
+.pedido-horario {
+  margin: 0 20px;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.ver-pedido {
+  background-color: #ff4b4b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ver-pedido:hover {
+  background-color: #e43e3e;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.entregue {
+  background-color: #4caf50;
+}
+
+.a-caminho {
+  background-color: #ffa726;
+}
+
+.cancelado {
+  background-color: #f44336;
+}

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles.css";
 import { CardapioCard } from "../CardapioCardComponent/CardapioCard";
 import { SelectPizza } from "../SelectPizzaComponent/SelectPizza";
+import { CartContext } from "../../components/CartComponent/CartContext";
 import AtumImg from "../../assets/images/pizzas/atum.jpeg";
 import CarneSecaImg from "../../assets/images/pizzas/carne_seca.jpeg";
 import FrangoImg from "../../assets/images/pizzas/frango.jpeg";
@@ -13,6 +14,7 @@ import SushiImg from "../../assets/images/pizzas/sushi.jpeg";
 import VegImg from "../../assets/images/pizzas/vegetariana.jpeg";
 
 export class Cardapio extends React.Component {
+  static contextType = CartContext;
   state = {
     selectedPizza: null,
   };
@@ -22,6 +24,11 @@ export class Cardapio extends React.Component {
   };
 
   handleCloseModal = () => {
+    this.setState({ selectedPizza: null });
+  };
+
+  handleAddToCart = (pizza) => {
+    this.context.addToCart(pizza);
     this.setState({ selectedPizza: null });
   };
 
@@ -147,6 +154,7 @@ export class Cardapio extends React.Component {
             pizzaName={this.state.selectedPizza.pizzaName}
             pizzaImg={this.state.selectedPizza.pizzaImg}
             pizzaPrice={this.state.selectedPizza.pizzaPrice}
+            onAddToCart={this.handleAddToCart}
             onClose={this.handleCloseModal}
           />
         )}
