@@ -1,3 +1,7 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+
 .confirm-modal {
   position: fixed;
   top: 0;
@@ -29,15 +33,22 @@
 
 .confirm-modal-content h2 {
   margin-bottom: 10px;
+  text-align: center;
+  font-weight: 800;
 }
 
 .confirm-modal-content p {
   margin-bottom: 20px;
+  color: black;
+}
+
+.confirm-modal-content strong{
+    color: #C2272D;
 }
 
 .confirm-modal-content button {
   padding: 10px 20px;
-  background-color: #272727;
+  background-color: #C2272D;
   color: white;
   border: none;
   border-radius: 5px;
@@ -45,5 +56,5 @@
 }
 
 .confirm-modal-content button:hover{
-    background-color: #444;
+    background-color: #dd2027;
 }

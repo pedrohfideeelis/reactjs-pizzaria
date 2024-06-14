@@ -7,7 +7,7 @@ const ConfirmModal = ({onClose}) => {
             <div className="confirm-modal-content">
                 <span className="close" onClick={onClose}>&times;</span>
                 <h2>PEDIDO CONFIRMADO!</h2>
-                <p>Seu pedido foi confirmado, você receberá informações pelo número de telefone inserido! Obrigado!</p>
+                <p>Seu pedido foi <strong>confirmado</strong>, você receberá informações<br/>pelo <strong>número de telefone</strong> inserido! <strong>Obrigado!</strong></p>
                 <button onClick={onClose}>OK</button>
             </div>
         </div>
