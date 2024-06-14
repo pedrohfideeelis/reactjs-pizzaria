@@ -9,33 +9,21 @@ export class Entrega extends React.Component {
         <form>
           <div className="form-group">
             <label htmlFor="name">Nome Completo:</label>
-            <input
-              type="text"
-              id="name"
-            />
+            <input type="text" id="name" />
           </div>
           <div className="form-group">
             <label htmlFor="phone">Telefone:</label>
-            <input
-              type="text"
-              id="phone"
-            />
+            <input type="text" id="phone" />
           </div>
           <div className="form-group">
             <label htmlFor="address">Endereço:</label>
-            <textarea
-              id="address"
-            ></textarea>
+            <input id="address" type="text"></input>
           </div>
           <div className="form-group">
             <label>Forma de Pagamento:</label>
             <div className="payment-methods">
               <label>
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="PIX"
-                />
+                <input type="radio" name="paymentMethod" value="PIX" />
                 PIX
               </label>
               <label>
