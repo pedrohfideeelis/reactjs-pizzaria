@@ -7,13 +7,13 @@ import { Cardapio } from "./components/CardapioComponent/Cardapio";
 import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";
 import { Login } from "./components/LoginComponent/Login";
+import { Entrega } from "./components/FormEntregaComponent/Entrega";
 import { CartProvider } from "./components/CartComponent/CartContext";
 import "./App.css";
 
 class App extends React.Component {
   render() {
     return (
-      <>
       <CartProvider>
         <Navbar />
         <Routes>
@@ -22,10 +22,10 @@ class App extends React.Component {
           <Route path="/sobre-nos" element={<Sobre />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<Login />} />
+          <Route path="/entrega" element={<Entrega />} />
         </Routes>
         <Footer />
-        </CartProvider>
-      </>
+      </CartProvider>
     );
   }
 }

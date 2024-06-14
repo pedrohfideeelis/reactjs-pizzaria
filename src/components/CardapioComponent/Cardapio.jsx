@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./styles.css";
 import { CardapioCard } from "../CardapioCardComponent/CardapioCard";
 import { SelectPizza } from "../SelectPizzaComponent/SelectPizza";
-import { CartContext } from "../../components/CartComponent/CartContext";
+import { CartContext } from "../CartComponent/CartContext";
 import AtumImg from "../../assets/images/pizzas/atum.jpeg";
 import CarneSecaImg from "../../assets/images/pizzas/carne_seca.jpeg";
 import FrangoImg from "../../assets/images/pizzas/frango.jpeg";

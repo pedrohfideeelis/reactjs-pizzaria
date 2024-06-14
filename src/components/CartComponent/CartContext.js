@@ -14,10 +14,12 @@ export const CartProvider = ({ children }) => {
     setCartItems(newCartItems);
   };
 
-  const totalAmount = cartItems.reduce((total, item) => total + item.pizzaPrice, 0);
+  const getTotalPrice = () => {
+    return cartItems.reduce((total, item) => total + item.pizzaPrice, 0);
+  };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalAmount }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getTotalPrice }}>
       {children}
     </CartContext.Provider>
   );
