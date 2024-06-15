@@ -5,7 +5,10 @@
 .delivery-form {
   width: 50%;
   margin: 50px auto;
-  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 60px;
   border-radius: 10px;
   background-color: #d3d3d3;
 }
@@ -83,3 +86,11 @@
 .cancel-button:hover {
     background-color: #dd2027;
 }
+
+.error {
+  color: red;
+  font-weight: 700;
+  font-size: 0.875em; 
+  margin-top: 0.25em;
+}
+

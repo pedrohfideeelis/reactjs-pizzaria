@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { CartContext } from "../CartComponent/CartContext";
-import CartModal from "../CartComponent/CartModal";
-import Logo from "../../assets/images/PIZZA_LOGO_HORIZONTAL.png";
+import { CartContext } from "../../CartComponent/CartContext";
+import CartModal from "../../CartComponent/CartModal";
+import Logo from "../../../assets/images/PIZZA_LOGO_HORIZONTAL.png";
 import "./styles.css";
 
 const Navbar = () => {
