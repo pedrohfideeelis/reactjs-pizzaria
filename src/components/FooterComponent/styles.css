@@ -5,7 +5,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-content {
@@ -26,7 +26,7 @@ footer {
 
 .footer-section {
   min-width: 150px;
-  margin-right: 0px; 
+  margin-right: 0px;
 }
 
 .footer-section h4 {
@@ -61,7 +61,7 @@ footer {
 #contact {
   display: flex;
   gap: 15px;
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 #contact a {
@@ -76,8 +76,8 @@ footer {
 #contact-brand {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  margin-left: auto; 
+  align-items: flex-start;
+  margin-left: auto;
 }
 
 #copy {

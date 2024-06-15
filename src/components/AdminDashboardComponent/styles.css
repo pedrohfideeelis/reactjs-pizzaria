@@ -1,0 +1,52 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+#dashboard-content {
+  width: 50%;
+  height: 210px;
+  margin: 50px auto;
+  padding: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+}
+
+#dashboard-content h2 {
+  color: black;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.admin-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+#fila,
+#historico,
+#sair {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: medium;
+}
+
+#fila {
+  background-color: #F8931F;
+  color: white;
+}
+
+#historico {
+  background-color: #F8931F;
+  color: white;
+}
+
+#sair {
+  background-color: #c2272d;
+  color: white;
+}
