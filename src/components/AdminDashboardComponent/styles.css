@@ -4,7 +4,7 @@
 
 #dashboard-content {
   width: 50%;
-  height: 210px;
+  height: 150px;
   margin: 50px auto;
   padding: 20px;
   padding-top: 50px;
@@ -34,6 +34,7 @@
   cursor: pointer;
   font-size: 14px;
   font-size: medium;
+  font-weight: 500;
 }
 
 #fila {
