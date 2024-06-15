@@ -1,50 +1,50 @@
-import React from "react";
+import React, { useContext } from "react";
+import OrderContext from "../OrderComponent/OrderContext";
 import "./styles.css";
 
-export class Fila extends React.Component {
-  render() {
-    return (
-      <>
-        <div class="pedidos-container">
-          <h2>Pedidos</h2>
-          <div class="fila">FILA: 15</div>
+export const Fila = () => {
+  const { orders, updateOrderStatus } = useContext(OrderContext);
 
-          <div class="pedido">
-            <div class="pedido-info">
-              <p>
-                <strong>Pizza de Sushi - P</strong> (Sem Pepino)Fatiar em 4
-                pedaços
-              </p>
-            </div>
-            <div class="pedido-horario">19:36</div>
-            <button class="ver-pedido">Ver Pedido</button>
-            <div class="status entregue">ENTREGUE</div>
-          </div>
+  const handleStatusChange = (id, status) => {
+    updateOrderStatus(id, status);
+  };
 
-          <div class="pedido">
-            <div class="pedido-info">
-              <p>
-                <strong>Pizza de Calabresa - G</strong> (Sem Cebola)Fatiar em 8
-                pedaços
-              </p>
+  return (
+    <>
+      <div className="pedidos-container">
+        <h2>Pedidos</h2>
+        <div className="fila">FILA: {orders.length}</div>
+        {orders.map((order) => (
+          <div className="pedido" key={order.id}>
+            <div className="pedido-info">
+              {order.cart.map((item, index) => (
+                <p key={index}>
+                  <strong>
+                    {item.name} - {item.size}
+                  </strong>{" "}
+                  {item.observation && `(${item.observation})`}
+                </p>
+              ))}
             </div>
-            <div class="pedido-horario">20:10</div>
-            <button class="ver-pedido">Ver Pedido</button>
-            <div class="status a-caminho">À CAMINHO</div>
-          </div>
-
-          <div class="pedido">
-            <div class="pedido-info">
-              <p>
-                <strong>Pizza de Queijo - M</strong>Não fatiar
-              </p>
+            <div className="pedido-horario">
+              {new Date(order.timestamp).toLocaleTimeString()}
             </div>
-            <div class="pedido-horario">21:00</div>
-            <button class="ver-pedido">Ver Pedido</button>
-            <div class="status cancelado">CANCELADO</div>
+            <button className="ver-pedido">Ver Pedido</button>
+            <div className={`status ${order.status.toLowerCase()}`}>
+              {order.status}
+            </div>
+            <select
+              value={order.status}
+              onChange={(e) => handleStatusChange(order.id, e.target.value)}
+            >
+              <option value="A FAZER">A FAZER</option>
+              <option value="PRONTO">PRONTO</option>
+              <option value="ENTREGUE">ENTREGUE</option>
+              <option value="CANCELADO">CANCELADO</option>
+            </select>
           </div>
-        </div>
-      </>
-    );
-  }
-}
+        ))}
+      </div>
+    </>
+  );
+};

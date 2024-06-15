@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import InputMask from "react-input-mask";
 import ConfirmModal from "../ConfirmComponent/ConfirmModal";
 import { CartContext } from "../CartComponent/CartContext";
+import OrderContext from "../OrderComponent/OrderContext";
 import "./styles.css";
 
 export const Entrega = () => {
@@ -12,7 +13,8 @@ export const Entrega = () => {
   const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
   const [errors, setErrors] = useState({});
-  const { clearCart } = useContext(CartContext);
+  const { clearCart, cart } = useContext(CartContext);
+  const { addOrder } = useContext(OrderContext);
   const navigate = useNavigate();
 
   const validate = () => {
@@ -57,6 +59,17 @@ export const Entrega = () => {
   };
 
   const handleConfirm = () => {
+    const newOrder = {
+      id: Date.now(),
+      name,
+      phone,
+      address,
+      paymentMethod,
+      cart,
+      timestamp: new Date(),
+      status: "A FAZER",
+    };
+    addOrder(newOrder);
     clearCart();
     navigate("/");
   };
