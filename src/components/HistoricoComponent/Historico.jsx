@@ -4,66 +4,40 @@ import "./styles.css";
 
 export const Historico = () => {
   const { orders } = useContext(OrderContext);
-  const [filter, setFilter] = useState({ id: "", date: "", phone: "" });
+  const [search, setSearch] = useState("");
 
-  const handleFilterChange = (e) => {
-    setFilter({ ...filter, [e.target.name]: e.target.value });
-  };
-
-  const filteredOrders = orders
-    .filter((order) => order.status === "ENTREGUE")
-    .filter((order) => {
-      return (
-        (!filter.id || order.id.toString().includes(filter.id)) &&
-        (!filter.date ||
-          new Date(order.timestamp)
-            .toLocaleDateString()
-            .includes(filter.date)) &&
-        (!filter.phone || order.phone.includes(filter.phone))
-      );
-    });
+  const filteredOrders = orders.filter(
+    (order) =>
+      order.status === "ENTREGUE" &&
+      (order.id.toString().includes(search) ||
+        order.timestamp.toLocaleDateString().includes(search) ||
+        order.phone.includes(search))
+  );
 
   return (
     <div className="historico">
       <h2>Histórico</h2>
-      <div className="filter">
-        <input
-          type="text"
-          name="id"
-          placeholder="Filtrar por ID"
-          value={filter.id}
-          onChange={handleFilterChange}
-        />
-        <input
-          type="text"
-          name="date"
-          placeholder="Filtrar por Data"
-          value={filter.date}
-          onChange={handleFilterChange}
-        />
-        <input
-          type="text"
-          name="phone"
-          placeholder="Filtrar por Telefone"
-          value={filter.phone}
-          onChange={handleFilterChange}
-        />
-      </div>
+      <input
+        type="text"
+        placeholder="Filtrar por ID, Data ou Telefone"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       {filteredOrders.map((order) => (
-        <div className="pedido" key={order.id}>
+        <div key={order.id} className="pedido">
           <div className="pedido-info">
-            {order.cart.map((item, index) => (
-              <p key={index}>
-                {item.name} - {item.size}{" "}
-                {item.observation && `(${item.observation})`}
-              </p>
-            ))}
+            <p>
+              <strong>
+                {order.cart.map((item) => item.name).join(", ")} -{" "}
+                {order.cart.map((item) => item.size).join(", ")}
+              </strong>{" "}
+              ({order.cart.map((item) => item.observation).join(", ")})
+            </p>
           </div>
           <div className="pedido-action">
-            <span className="pedido-data">
-              {new Date(order.timestamp).toLocaleString()}
+            <span className="pedido-horario">
+              {order.timestamp.toLocaleTimeString()}
             </span>
-            <button className="ver-pedido">Ver Pedido</button>
           </div>
         </div>
       ))}

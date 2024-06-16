@@ -5,37 +5,32 @@ import "./styles.css";
 export const Fila = () => {
   const { orders, updateOrderStatus } = useContext(OrderContext);
 
-  const handleStatusChange = (id, status) => {
-    updateOrderStatus(id, status);
-  };
-
   return (
-    <>
-      <div className="pedidos-container">
-        <h2>Pedidos</h2>
-        <div className="fila">FILA: {orders.length}</div>
-        {orders.map((order) => (
-          <div className="pedido" key={order.id}>
+    <div className="pedidos-container">
+      <h2>Pedidos</h2>
+      <div className="fila">
+        FILA: {orders.filter((order) => order.status === "A FAZER").length}
+      </div>
+      {orders
+        .filter((order) => order.status === "A FAZER")
+        .map((order) => (
+          <div key={order.id} className="pedido">
             <div className="pedido-info">
-              {order.cart.map((item, index) => (
-                <p key={index}>
-                  <strong>
-                    {item.name} - {item.size}
-                  </strong>{" "}
-                  {item.observation && `(${item.observation})`}
-                </p>
-              ))}
+              <p>
+                <strong>
+                  {order.cart.map((item) => item.name).join(", ")} -{" "}
+                  {order.cart.map((item) => item.size).join(", ")}
+                </strong>{" "}
+                ({order.cart.map((item) => item.observation).join(", ")})
+              </p>
             </div>
             <div className="pedido-horario">
-              {new Date(order.timestamp).toLocaleTimeString()}
+              {order.timestamp.toLocaleTimeString()}
             </div>
             <button className="ver-pedido">Ver Pedido</button>
-            <div className={`status ${order.status.toLowerCase()}`}>
-              {order.status}
-            </div>
             <select
               value={order.status}
-              onChange={(e) => handleStatusChange(order.id, e.target.value)}
+              onChange={(e) => updateOrderStatus(order.id, e.target.value)}
             >
               <option value="A FAZER">A FAZER</option>
               <option value="PRONTO">PRONTO</option>
@@ -44,7 +39,6 @@ export const Fila = () => {
             </select>
           </div>
         ))}
-      </div>
-    </>
+    </div>
   );
 };

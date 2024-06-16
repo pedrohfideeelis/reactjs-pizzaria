@@ -1,82 +1,61 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import InputMask from "react-input-mask";
 import ConfirmModal from "../ConfirmComponent/ConfirmModal";
 import { CartContext } from "../CartComponent/CartContext";
 import OrderContext from "../OrderComponent/OrderContext";
 import "./styles.css";
 
 export const Entrega = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
   const [errors, setErrors] = useState({});
-  const { clearCart, cart } = useContext(CartContext);
-  const { addOrder } = useContext(OrderContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const { cart, clearCart } = useContext(CartContext);
+  const { addOrderToQueue, addOrderToHistory } = useContext(OrderContext);
+
   const navigate = useNavigate();
 
-  const validate = () => {
-    let errors = {};
-    if (name.trim() === "") {
-      errors.name = "O nome é obrigatório.";
-    } else if (name.length < 10) {
-      errors.name = "O nome deve ter pelo menos 10 caracteres.";
+  const validateForm = () => {
+    const newErrors = {};
+    if (name.length < 10) {
+      newErrors.name = "Nome deve ter pelo menos 10 caracteres.";
     }
-    if (phone.trim() === "") {
-      errors.phone = "O telefone é obrigatório.";
-    } else {
-      const phoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
-      if (!phone.match(phoneRegex)) {
-        errors.phone =
-          "O telefone deve estar no formato (XX) XXXXX-XXXX e conter 11 caracteres numéricos.";
-      }
+    if (!/^\(\d{2}\) \d{5}-\d{4}$/.test(phone)) {
+      newErrors.phone = "Telefone deve estar no formato (XX) XXXXX-XXXX.";
     }
-    if (address.trim() === "") {
-      errors.address = "O endereço é obrigatório.";
-    } else if (address.length < 10) {
-      errors.address = "O endereço deve ter pelo menos 10 caracteres.";
+    if (address.length < 10) {
+      newErrors.address = "Endereço deve ter pelo menos 10 caracteres.";
     }
     if (!paymentMethod) {
-      errors.paymentMethod = "A forma de pagamento é obrigatória.";
+      newErrors.paymentMethod = "Selecione uma forma de pagamento.";
     }
-    return errors;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length === 0) {
+    if (validateForm()) {
       setIsModalOpen(true);
-    } else {
-      setErrors(validationErrors);
     }
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleConfirm = () => {
-    const newOrder = {
-      id: Date.now(),
-      name,
-      phone,
-      address,
-      paymentMethod,
-      cart,
-      timestamp: new Date(),
-      status: "A FAZER",
-    };
-    addOrder(newOrder);
-    clearCart();
-    navigate("/");
   };
 
   const handleCancel = () => {
     clearCart();
-    navigate("/cardapio");
+    navigate("/");
+  };
+
+  const order = {
+    name,
+    phone,
+    address,
+    paymentMethod,
+    cart,
+    timestamp: new Date(),
+    status: "A FAZER",
   };
 
   return (
@@ -95,13 +74,12 @@ export const Entrega = () => {
         </div>
         <div className="form-group">
           <label htmlFor="phone">Telefone:</label>
-          <InputMask
-            mask="(99) 99999-9999"
+          <input
+            type="text"
+            id="phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-          >
-            {(inputProps) => <input {...inputProps} type="text" id="phone" />}
-          </InputMask>
+          />
           {errors.phone && <span className="error">{errors.phone}</span>}
         </div>
         <div className="form-group">
@@ -122,6 +100,7 @@ export const Entrega = () => {
                 type="radio"
                 name="paymentMethod"
                 value="PIX"
+                checked={paymentMethod === "PIX"}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
               PIX
@@ -131,6 +110,7 @@ export const Entrega = () => {
                 type="radio"
                 name="paymentMethod"
                 value="Cartão de Crédito/Débito"
+                checked={paymentMethod === "Cartão de Crédito/Débito"}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
               Cartão de Crédito/Débito
@@ -154,7 +134,12 @@ export const Entrega = () => {
         </div>
       </form>
       {isModalOpen && (
-        <ConfirmModal onClose={handleCloseModal} onConfirm={handleConfirm} />
+        <ConfirmModal
+          onClose={() => setIsModalOpen(false)}
+          order={order}
+          addOrderToHistory={addOrderToHistory}
+          addOrderToQueue={addOrderToQueue}
+        />
       )}
     </div>
   );

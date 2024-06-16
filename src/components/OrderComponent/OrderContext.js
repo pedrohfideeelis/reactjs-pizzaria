@@ -5,8 +5,12 @@ const OrderContext = createContext();
 export const OrderProvider = ({ children }) => {
   const [orders, setOrders] = useState([]);
 
-  const addOrder = (order) => {
-    setOrders([...orders, order]);
+  const addOrderToQueue = (order) => {
+    setOrders([...orders, { ...order, id: orders.length + 1 }]);
+  };
+
+  const addOrderToHistory = (order) => {
+    setOrders([...orders, { ...order, status: "ENTREGUE" }]);
   };
 
   const updateOrderStatus = (id, status) => {
@@ -16,7 +20,9 @@ export const OrderProvider = ({ children }) => {
   };
 
   return (
-    <OrderContext.Provider value={{ orders, addOrder, updateOrderStatus }}>
+    <OrderContext.Provider
+      value={{ orders, addOrderToQueue, addOrderToHistory, updateOrderStatus }}
+    >
       {children}
     </OrderContext.Provider>
   );
