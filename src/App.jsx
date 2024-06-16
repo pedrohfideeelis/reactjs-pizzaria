@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Home/NavComponent/Navbar";
+import Navbar from "./components/NavComponent/Navbar";
 import { Footer } from "./components/FooterComponent/Footer";
-import { Home } from "./components/Home/HomeComponent/Home";
+import { Home } from "./components/HomeComponent/Home";
 import { Cardapio } from "./components/CardapioComponent/Cardapio";
 import { Sobre } from "./components/SobreComponent/Sobre";
 import { Admin } from "./components/AdminComponent/Admin";

@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../../PromoComponent/Banner";
-import {CardapioPreview} from '../../CardapioPreviewComponent/CardapioPreview'
-import SobrePreview from "../../SobrePreviewComponent/SobrePreview";
+import Banner from "../PromoComponent/Banner";
+import {CardapioPreview} from '../CardapioPreviewComponent/CardapioPreview'
+import SobrePreview from "../SobrePreviewComponent/SobrePreview";
 
 export class Home extends React.Component{
     render(){
